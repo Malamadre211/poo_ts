@@ -4,6 +4,9 @@ import { Joueur } from "./Joueur";
 import { Equipe } from "./Equipe";
 import { Match } from "./Match";
 import { Tournoi } from "./Tournoi";
+import { Armes } from "./Armes";
+import { Vikings } from "./Vikings";
+
 
 const carPetite = new Car ('red', 22);
 const carNew = new Car ('black', 100);
@@ -43,4 +46,5 @@ console.log(`Color small car: ${carPetite.color}.`)
 
     // match1.equipe[0].joueurs[0].nom ~modo di visualizzare un infiormazione precisa~
 
+    
     
