@@ -10,22 +10,18 @@ export class Match {
         this.score = score;
     }
 
-    public TeamWin(){
-        while (this.equipe[0].points <20 && this.equipe[1].points <20) {
-        let randomWin = Math.floor(Math.random()*2)
-        if (randomWin == 0) {
-            this.equipe[0].points += 1
-            if (this.equipe[0].points ==20) {
-                console.log("L'equipe 1 gnagne !")
-            }
-        } else if (randomWin == 0) {
-            this.equipe[1].points += 1
-            if (this.equipe[1].points == 20) {
-                console.log("L'equipe 2 gnagne !")
-            }
-        } 
-
-        
+    simulate(){
+        this.score[0]=20
+        this.score[1]=12
     }
+
+    public TeamWin(){
+        if (this.score[0] > this.score[1]) {
+            return this.equipe[0]
+        }
+        else {
+            return this.equipe[1]
+        }
+        
     }
 }

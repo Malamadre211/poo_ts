@@ -39,12 +39,8 @@ console.log(`Color small car: ${carPetite.color}.`)
 
     console.log(`Nombre de joueurs: ${(Joueur.nbJoueur)}.`);
 
-    const match1 = new Match ([equipe1,equipe2])
-    const match2 = new Match ([equipe3,equipe4])
 
-    const tournoi = new Tournoi ([match1,match2])
 
     // match1.equipe[0].joueurs[0].nom ~modo di visualizzare un infiormazione precisa~
 
-    match1.TeamWin();
-    match2.TeamWin();
+    
