@@ -1,8 +1,9 @@
 import { Car } from "./Car";
 import { Conducteur } from "./Conducteur";
 import { Joueur } from "./Joueur";
-import { Equipe } from "./equipe";
-import { Match } from "./match";
+import { Equipe } from "./Equipe";
+import { Match } from "./Match";
+import { Tournoi } from "./Tournoi";
 
 const carPetite = new Car ('red', 22);
 const carNew = new Car ('black', 100);
@@ -26,14 +27,24 @@ console.log(`Color small car: ${carPetite.color}.`)
     const joueur2 = new Joueur ('Wembi', 'Victor', 19)
     const joueur3 = new Joueur ('Durant', 'Mat', 25)
     const joueur4 = new Joueur ('Wembi', 'Kevin', 32)
+    const joueur5 = new Joueur ('Durant', 'Kevin', 37)
+    const joueur6 = new Joueur ('Wembi', 'Victor', 19)
+    const joueur7 = new Joueur ('Durant', 'Mat', 25)
+    const joueur8 = new Joueur ('Wembi', 'Kevin', 32)
 
-    const equipe1 = new Equipe ([joueur1,joueur2])
-    const equipe2 = new Equipe ([joueur3,joueur4])
-    const equipe3 = new Equipe ([joueur1,joueur2])
-    const equipe4 = new Equipe ([joueur3,joueur4])
+    const equipe1 = new Equipe ([joueur1,joueur2], 0)
+    const equipe2 = new Equipe ([joueur3,joueur4], 0)
+    const equipe3 = new Equipe ([joueur5,joueur6], 0)
+    const equipe4 = new Equipe ([joueur7,joueur8], 0)
 
     console.log(`Nombre de joueurs: ${(Joueur.nbJoueur)}.`);
 
     const match1 = new Match ([equipe1,equipe2])
+    const match2 = new Match ([equipe3,equipe4])
 
-    console.log(match1)
+    const tournoi = new Tournoi ([match1,match2])
+
+    // match1.equipe[0].joueurs[0].nom ~modo di visualizzare un infiormazione precisa~
+
+    match1.TeamWin();
+    match2.TeamWin();
