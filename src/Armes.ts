@@ -1,10 +1,17 @@
-export class Armes {
+export class Arme {
 
-    public name: string;
-    public force: number;
-  
-    constructor(name: string, force: number) {
-        this.name = name;
-        this.force = force;
+  private nom: string
+  public force: number
+
+  constructor(
+      nom: string,
+      force: number,
+  ) {
+      this.nom = nom
+      this.force = force
+  }
+
+  public isLameDeSang(): boolean {
+      return this.nom === 'Lame de sang'
   }
 }

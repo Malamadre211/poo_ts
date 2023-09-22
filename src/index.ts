@@ -2,10 +2,11 @@ import { Car } from "./Car";
 import { Conducteur } from "./Conducteur";
 import { Joueur } from "./Joueur";
 import { Equipe } from "./Equipe";
-import { Match } from "./Match";
-import { Tournoi } from "./Tournoi";
-import { Armes } from "./Armes";
-import { Vikings } from "./Vikings";
+import { Arme } from "./Armes";
+import { Viking } from "./Vikings";
+import { Combat } from "./Combat";
+import { ElementSimplon } from "./Style";
+
 
 
 const carPetite = new Car ('red', 22);
@@ -47,4 +48,32 @@ console.log(`Color small car: ${carPetite.color}.`)
     // match1.equipe[0].joueurs[0].nom ~modo di visualizzare un infiormazione precisa~
 
     
-    
+const viking1 = new Viking('viking1', 48, 48, 12, new Arme('Lame du roi déçu', 10), 6)
+const viking2 = new Viking('viking2', 36, 39, 15, new Arme('Lame de sang', 20), 2)
+
+const combat = new Combat([viking1, viking2])
+combat.simulate()
+combat.afficherVainqueur()
+
+// 1.
+const div = new ElementSimplon('div')
+div.classList.add('container')
+div.innerText = 'Hello World'
+
+// 2.
+console.log(div.toHTML())
+
+// 3.
+const h1 = new ElementSimplon('h1')
+h1.classList.add('title')
+h1.innerText = 'Mon titre'
+h1.style.color = 'red'
+
+// 4.
+console.log(h1.toHTML())
+
+// 5.
+const container = new ElementSimplon('div')
+container.classList.add('container')
+container.appendChild(h1)
+console.log(container.toHTML())
